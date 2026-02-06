@@ -1,5 +1,5 @@
 package com.mycompany.uml_arqui.classes.absatracts;
 
-public abstract class Profesor {
+public abstract class Profesor extends Persona{
     
 }
