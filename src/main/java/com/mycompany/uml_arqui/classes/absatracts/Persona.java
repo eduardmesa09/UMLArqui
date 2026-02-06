@@ -1,17 +1,17 @@
 package com.mycompany.uml_arqui.classes.absatracts;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class Persona {
     
     private String id;
     private String nombre;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private String direccion;
     private String telefono;
     private String correo;    
 
-    public Persona(String id, String nombre, Date fechaNacimiento, String direccion, String telefono, String correo) {
+    public Persona(String id, String nombre, LocalDate fechaNacimiento, String direccion, String telefono, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
@@ -36,11 +36,11 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
-    public Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

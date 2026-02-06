@@ -2,16 +2,16 @@ package com.mycompany.uml_arqui.classes;
 
 import com.mycompany.uml_arqui.classes.absatracts.Persona;
 import com.mycompany.uml_arqui.enums.EstadoEstudiante;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Estudiante extends Persona{
     
     private String codigoEstudiante;
-    private Date fechaIngreso;
+    private LocalDate fechaIngreso;
     private Double promedioAcumulado;
     private EstadoEstudiante estado;
 
-    public Estudiante(String codigoEstudiante, Date fechaIngreso, Double promedioAcumulado, EstadoEstudiante estado, String id, String nombre, Date fechaNacimiento, String direccion, String telefono, String correo) {
+    public Estudiante(String codigoEstudiante, LocalDate fechaIngreso, Double promedioAcumulado, EstadoEstudiante estado, String id, String nombre, LocalDate fechaNacimiento, String direccion, String telefono, String correo) {
         super(id, nombre, fechaNacimiento, direccion, telefono, correo);
         this.codigoEstudiante = codigoEstudiante;
         this.fechaIngreso = fechaIngreso;
@@ -27,11 +27,11 @@ public class Estudiante extends Persona{
         this.codigoEstudiante = codigoEstudiante;
     }
 
-    public Date getFechaIngreso() {
+    public LocalDate getFechaIngreso() {
         return fechaIngreso;
     }
 
-    public void setFechaIngreso(Date fechaIngreso) {
+    public void setFechaIngreso(LocalDate fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
 
@@ -57,5 +57,13 @@ public class Estudiante extends Persona{
     
     public String verificarGrado(){
         return "";
+    }
+
+    public EstadoEstudiante getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoEstudiante estado) {
+        this.estado = estado;
     }
 }

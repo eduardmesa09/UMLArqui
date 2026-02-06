@@ -2,19 +2,23 @@ package com.mycompany.uml_arqui.classes;
 
 import com.mycompany.uml_arqui.enums.CategoriaProfesor;
 import com.mycompany.uml_arqui.classes.absatracts.Profesor;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ProfesorCatedra extends Profesor{
     
     private Double valorHora;
     private Double horasDictadas;
 
-    public ProfesorCatedra(Double valorHora, Double horasDictadas, String codigoEmpleado, Date fechaContratacion, String departamento, CategoriaProfesor categoria, int aniosExperiencia, String id, String nombre, Date fechaNacimiento, String direccion, String telefono, String correo) {
+    public ProfesorCatedra(Double valorHora, Double horasDictadas, String codigoEmpleado, LocalDate fechaContratacion, String departamento, CategoriaProfesor categoria, int aniosExperiencia, String id, String nombre, LocalDate fechaNacimiento, String direccion, String telefono, String correo) {
         super(codigoEmpleado, fechaContratacion, departamento, categoria, aniosExperiencia, id, nombre, fechaNacimiento, direccion, telefono, correo);
         this.valorHora = valorHora;
         this.horasDictadas = horasDictadas;
     }
 
+    public ProfesorCatedra() {
+        super(null, null, null, null, 0, null, null, null, null, null, null);
+    }
+    
     public Double getValorHora() {
         return valorHora;
     }

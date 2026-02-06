@@ -1,17 +1,17 @@
 package com.mycompany.uml_arqui.classes.absatracts;
 
 import com.mycompany.uml_arqui.enums.CategoriaProfesor;
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class Profesor extends Persona{
     
     private String codigoEmpleado;
-    private Date fechaContratacion;
+    private LocalDate fechaContratacion;
     private String departamento;
     private CategoriaProfesor categoria;
     private int aniosExperiencia;
 
-    public Profesor(String codigoEmpleado, Date fechaContratacion, String departamento, CategoriaProfesor categoria, int aniosExperiencia, String id, String nombre, Date fechaNacimiento, String direccion, String telefono, String correo) {
+    public Profesor(String codigoEmpleado, LocalDate fechaContratacion, String departamento, CategoriaProfesor categoria, int aniosExperiencia, String id, String nombre, LocalDate fechaNacimiento, String direccion, String telefono, String correo) {
         super(id, nombre, fechaNacimiento, direccion, telefono, correo);
         this.codigoEmpleado = codigoEmpleado;
         this.fechaContratacion = fechaContratacion;
@@ -19,7 +19,7 @@ public abstract class Profesor extends Persona{
         this.categoria = categoria;
         this.aniosExperiencia = aniosExperiencia;
     }
-
+    
     public String getCodigoEmpleado() {
         return codigoEmpleado;
     }
@@ -28,11 +28,11 @@ public abstract class Profesor extends Persona{
         this.codigoEmpleado = codigoEmpleado;
     }
 
-    public Date getFechaContratacion() {
+    public LocalDate getFechaContratacion() {
         return fechaContratacion;
     }
 
-    public void setFechaContratacion(Date fechaContratacion) {
+    public void setFechaContratacion(LocalDate fechaContratacion) {
         this.fechaContratacion = fechaContratacion;
     }
 
@@ -62,5 +62,13 @@ public abstract class Profesor extends Persona{
     
     public String consultarCargaAcademica(){
         return "";
+    }
+
+    public CategoriaProfesor getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaProfesor categoria) {
+        this.categoria = categoria;
     }
 }
